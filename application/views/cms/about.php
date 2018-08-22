@@ -171,6 +171,7 @@
                                                     <h5><?=$m['nama_mitra']?></h5>
                                                     <p><?=$m['alamat_mitra']?></p>
                                                     <p><?=$m['deskripsi']?></p>
+													<center><a targer="_blank" class="btn btn-default" href="<?=$m['link_mitra']?>"> Visit</a></center>
                                                 </div>
                                         </div>
 

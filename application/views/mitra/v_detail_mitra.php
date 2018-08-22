@@ -57,6 +57,11 @@ $this->load->view('include/header');
 											<td>:</td>
 											<td><?=$detail->alamat_mitra?></td>
 										</tr>
+										<tr>
+											<td>Link</td>
+											<td>:</td>
+											<td><a target="_blank" href="<?=$detail->link_mitra?>">Visit</a></td>
+										</tr>
 									</tbody>
 								</table>
 							</div>
