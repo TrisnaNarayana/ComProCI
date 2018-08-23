@@ -37,10 +37,34 @@
 	<div class="agile-ipage-banner  banner-w3layouts">
 		<!-- banner-info -->
 		<div class="banner-agileinfo">
+			<div class="nav-info">
+				<div class="container">
+					<div class="nav-contact">
+						<ul>
+							<li>
+								<a href="">
+									<i class="fa fa-phone"></i> +62 22 6145 6762</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa fa-envelope"></i> office@tcb.co.id</a>
+							</li>
+							<!-- <li style="float:right;">
+								<a href="">Register&nbsp;&nbsp;
+									<i class="fa fa-key"></i>
+								</a>
+							</li>
+							<li style="float:right; padding-right:0px;">
+								<a href="">Sign In |</a>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
 			<div class="container">
 				<div class="w3header">
 					<!--header-->
-					<nav class="navbar navbar-default">
+					<nav class="navbar navbar-default navbar-fixed-top">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 								<span class="sr-only">Toggle navigation</span>
@@ -48,9 +72,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<h1>
-								
-							</h1>
+							<a class="navbar-brand" href="#"><img src="<?=base_url().'assets/cms/images/tcb.png'?>" width="60px" alt=""></a>
 						</div>
 						<!-- navbar-header -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -59,30 +81,24 @@
 									<a href="<?=base_url().'Welcome'?>">Home</a>
 								</li>
 								<li>
-									<a href="<?=base_url().'Welcome/about'?>" >About</a>
+									<a href="<?=base_url().'Welcome/about'?>">About</a>
 								</li>
 								<li>
-									<a href="<?=base_url().'Welcome/team'?>" >Team</a>
+									<a href="<?=base_url().'Welcome/team'?>">Team</a>
 								</li>
 								<li>
 									<a href="<?=base_url().'Welcome/portofolio'?>">Product</a>
 								</li>
 								<li>
-									<a href="<?=base_url().'Welcome/info'?>" >Information</a>
+									<a href="<?=base_url().'Welcome/info'?>">Information</a>
 								</li>
 								<li>
 									<a href="<?=base_url().'Welcome/contact'?>">Reach US</a>
 								</li>
 							</ul>
-							<div class="clearfix"> </div>
 						</div>
 					</nav>
 				</div>
-				<!-- //header -->
-				<div class="banner-w3text-inner">
-					
-				</div>
 			</div>
-			<!-- //banner-info -->
 		</div>
 	</div>

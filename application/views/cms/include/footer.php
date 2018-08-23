@@ -1,48 +1,80 @@
 <?php $setting=$this->MModel->get("select * from profile where id_profile='1'");?>
-<div class="footer-nav w3ls-section text-center">
-		
-		<div class="container">
-				<div class="logo-footer text-center">
-						<h2><img src="<?=base_url().'img/profile/'.$setting->foto_profile?>" class="img-responsive"></h2>
-				</div>
-		<ul class="footer-top">
-			
-			<li>
-				<a href="<?=base_url().'Welcome/about'?>">what we do</a>
-			</li>
-			<li>
-				<a href="<?=base_url().'Welcome/portofolio'?>">our work</a>
-			</li>
-			<li>
-				<a href="<?=base_url().'Welcome'?>">company</a>
-			</li>
-			<li>
-				<a href="<?=base_url().'Welcome/contact'?>">contact</a>
-			</li>
-		</ul>
-		<div class="social-icons agileits">
-				<ul class="social-icons">
-						<li>
-							<a href="#" class="team-icon icon-border facebook"></a>
-						</li>
-						<li>
-							<a href="#" class="team-icon icon-border twitter"></a>
-						</li>
-						<li>
-							<a href="#" class="team-icon icon-border instagram"></a>
-						</li>
-					</ul>
-		</div>
-		<div class="address">
-			<p><?=$setting->alamat?></p>
-			<a href="mailto:<?=$setting->email?>"><?=$setting->email?></a>
-		</div>
 
-	</div>
-	</div>
-	<div class="w3_agile-copyright text-center">
-		<p>© 2018 PT Tali Cahaya Buana. All rights reserved</a>
-		</p>
+		
+		<div class="w3ls-section w3-footer" id="footer" style="background:url('<?=base_url().'assets/cms/images/bg.png'?>') no-repeat;background-size: cover;background-position:center;">
+		<div class="container">
+				<div class="row">
+					<div class="container">
+					<img src="<?=base_url().'assets/cms/images/tcb.png'?>" width="200px" alt=""><br>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="ft-panel">
+							<div class="head-ft-panel">
+								<i class="fa fa-map-marker"></i> Address
+							</div>
+							<hr class="hr-color">
+							<div class="body-ft-panel">
+							<p>jl.jongjolong no 25 </p>
+								<p>Buah Batu ,Bandung kidul </p>
+								<p>Kota Bandung, Jawa Barat </p>
+								<p>Indonesia | 40262 </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="ft-panel">
+							<div class="head-ft-panel">
+								<i class="fa fa-address-book"></i> Get In Touch
+							</div>
+							<hr class="hr-color">
+							<div class="body-ft-panel">
+								<p><i class="fa fa-clock-o"></i> Monday - Friday | 9 a.m - 5 p.m</p>
+								<p><i class="fa fa-envelope"></i> Office@tcb.co.id</p>
+								<p><i class="fa fa-phone"></i> +62 22 61456762 / 7323196</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="ft-panel">
+							<div class="head-ft-panel">
+								<i class="fa fa-info-circle"></i> Information Links
+							</div>
+							<hr class="hr-color">
+							<div class="body-ft-panel">
+								<ul>
+									<li><a href="http://"></a></li>
+									<li><a href="http://"></a></li>
+									<li><a href="http://"></a></li>
+									<li><a href="http://"></a></li>
+									<li><a href="http://"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="ft-panel">
+							<div class="head-ft-panel">
+								<i class="fa fa-group"></i> Support
+							</div>
+							<hr class="hr-color">
+							<div class="body-ft-panel">
+							<ul>
+									<li><a href="http://"></a></li>
+									<li><a href="http://"></a></li>
+									<li><a href="http://"></a></li>
+									<li><a href="http://"></a></li>
+									<li><a href="http://"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.6339013182987!2d107.61740291436742!3d-6.934284894989952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e887161ff37b%3A0xd2022ea1b54061e0!2sTali+Cahaya+Buana!5e0!3m2!1sid!2sid!4v1534982307449" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+		</div>				  
 	</div>
 	<!-- //footer -->
 	<!-- Tooltip -->

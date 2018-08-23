@@ -92,7 +92,7 @@
 		<!-- banner-info -->
 		<div class="banner-agileinfo">
 			<div class="nav-info">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="nav-contact">
 						<ul>
 							<li>
@@ -118,7 +118,7 @@
 			<div class="container">
 				<div class="w3header">
 					<!--header-->
-					<nav class="navbar navbar-default">
+					<nav class="navbar navbar-default navbar-fixed-top">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 								<span class="sr-only">Toggle navigation</span>
@@ -180,7 +180,7 @@
 		</div>
 	</div>
 
-	<div class="w3ls-section w3-data-center" id="data-center" style="background:#F6F6F6;">
+	<div class="w3ls-section w3-data-center" id="data-center" style="background:url('<?=base_url().'assets/cms/images/bg2.png'?>') no-repeat;background-size: cover;background-position:center;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
@@ -200,13 +200,16 @@
 							<div id="button" >
 								<ul>
 									<li class="top">
-										<a class="btn btn-data-center form-control btn-md">Data Center Building <i class="fa fa-angle-down pull-right"></i></a>
+										<a class="btn btn-data-center form-control btn-md">Data Center & Network Infrastructure <i class="fa fa-angle-down pull-right"></i></a>
 									</li>
 									<li class="item">
-										<div class="triangle"></div><a class="btn btn-data-center-sub form-control btn-md"  data-toggle="modal" data-target="#modalku">Router & Switching</a>
+										<div class="triangle"></div><a class="btn btn-data-center-sub form-control btn-md"  data-toggle="modal" data-target="#modalku">Server</a>
 									</li>
 									<li class="item">
-										<a class="btn btn-data-center-sub form-control btn-md"  data-toggle="modal" data-target="#modalku">Router & Switching</a>
+										<a class="btn btn-data-center-sub form-control btn-md"  data-toggle="modal" data-target="#modalku">Racking System</a>
+									</li>
+									<li class="item">
+										<a class="btn btn-data-center-sub form-control btn-md"  data-toggle="modal" data-target="#modalku">Wireless Technology</a>
 									</li>
 								</ul>
 
@@ -317,20 +320,16 @@
 			</div>
 		</div>
 	</div>
-	<div class="w3ls-section w3-harness" id="harness" style="background:url('<?=base_url().'assets/cms/images/bg.png'?>') no-repeat;background-size: cover;background-position:center;">
+	<div class="w3ls-section w3-harness" id="harness" style="background:url('<?=base_url().'assets/cms/images/bg2.png'?>') no-repeat;background-size: cover;background-position:center;">
 		<div class="container">
-
-			<div class="row">
-				<div class="head-harness">
-					<div class="col-md-2 col-sm-12 col-xs-12">
-						<div class="tittle">
-							<span>HARNESS</span>
-						</div>
+			<div class="row box">
+				<div class="col-md-2 col-sm-12 col-xs-12">
+					<div class="tittle">
+						<span>HARNESS</span>
 					</div>
-					<div class="col-md-8 col-sm-12 col-xs-12">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam esse facere ducimus sed alias tenetur magni maxime
-							saepe velit?
-					</div>
+				</div>
+				<div class="col-md-8 col-sm-12 col-xs-12">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit obcaecati asperiores, incidunt accusamus itaque, fugiat voluptates est ad ipsa rerum illum omnis enim, sapiente distinctio unde tempore quaerat odio explicabo officia corporis. Fuga consectetur reprehenderit laboriosam maiores sed vel eos modi beatae? Aliquid minima laborum fugiat eveniet quia incidunt accusamus recusandae, eligendi illo modi quos neque, alias facilis debitis dolore praesentium voluptatibus beatae odio cupiditate laudantium? Deleniti neque nihil inventore dolores eligendi molestias eius ut laudantium numquam! Quasi eligendi ipsam corrupti quisquam, dignissimos nostrum ab quae veniam nemo et, consequatur culpa nam suscipit maiores porro aliquid praesentium exercitationem iusto tenetur.
 				</div>
 			</div>
 			<div class="row">
@@ -339,7 +338,10 @@
 				   foreach ($product as $p) { ?>
 				<div class="col-md-4">
 					<center>
-					<img class="img-responsive" src="<?=base_url().'img/product/'.$p['foto_product']?>">
+					<img class="img-responsive image-harness" src="<?=base_url().'img/product/'.$p['foto_product']?>">
+						<div class="middle-image">
+							<div class="text-image"><?=$p['nama_product']?></div>
+						</div>
 				</center>
 				</div>
 				<?php } } ?>
@@ -347,207 +349,26 @@
 			</div>
 		</div>
 	</div>
-	<div class="w3ls-section w3-about" id="about" style="background:url('<?=base_url().'img/profile/B.png'?>')">
-		<div class="container">
+	<div class="w3ls-section w3-stayuptodate" id="stayuptodate" style="background:url('<?=base_url().'assets/cms/images/bg2.png'?>') no-repeat;background-size: cover;background-position:center;">
 			<div class="row">
-				<?php $info=$this->MModel->getData("select * from info order by id_info DESC limit 3");
-			if($info){ 
-			foreach($info as $i) {?>
-				<div class="col-md-4">
-					<div class="panel panel-default">
-						<img src="<?=base_url().'img/info/'.$i['img']?>" class="img-rounded img-responsive">
-						<div class="panel-heading">
-							<?=$i['tgl_input']?>
-						</div>
-						<div class="panel-body">
-							<h4>
-								<?=$i['judul_info']?>
-							</h4>
-							<p>
-								<?=substr($i['deskripsi'],0,200)?>...</p>
-						</div>
-						<div class="panel-footer">
-							<a href="<?=base_url().'Welcome/detInfo/'.$i['id_info']?>">baca lebih lanjut...</a>
-						</div>
-					</div>
+				
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<img src="<?=base_url().'assets/cms/images/building2.png'?>" width="100%" alt="">
 				</div>
-				<?php } } ?>
-				<div class="col-md-12">
-					<center>
-						<a href="<?=base_url().'Welcome/info'?>" class="btn btn-danger btn sm">LEARN MORE</a>
-					</center>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					
+				<form action="" method="POST" role="form" class="form-stayuptodate">
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
 				</div>
 			</div>
-
-
-
-		</div>
-	</div>
-	<!-- about-slid -->
-	<div class="about-w3slid">
-		<div class="container">
-			<h4>Vision & Mision</h4>
-			<p>
-				<?=$setting->visi?>
-			</p>
-			<a href="#" data-toggle="modal" data-target="#myModal" class="agile-more">Read More</a>
-		</div>
 	</div>
 	<!-- //about-slid -->
 	<!--services section starts here-->
-	<section class="service-section  w3ls-section" id="services">
-		<div class="container">
-
-
-			<div class="row">
-				<div class="col-md-6 col-lg-6 col-xs-12 col-md-border">
-					<div class="center-block">
-						<center>
-							<img src="<?=base_url().'img/profile/Harness.png'?>" class="img-responsive">
-						</center>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-6 col-xs-12 col-md-border">
-					<small>
-						<p>
-							<?=$dsc->desc_product?>
-						</p>
-					</small>
-				</div>
-			</div>
-			<hr>
-
-			<div class="container">
-
-				<div class="service-grids agile">
-					<div class="service-grid agileits_w3layouts ">
-						<?php $product=$this->MModel->getData("select * from product  order by id_product DESC limit 6");
-			 $no=1; ;if($product){
-			foreach ($product as $p) { ?>
-						<div class="col-md-4 contact-right-grid">
-							<div class="panel-default">
-								<center>
-									<img class="img-responsive" src="<?=base_url().'img/product/'.$p['foto_product']?>">
-								</center>
-
-								<div class="panel-heading bg-default">
-									<center>
-										<a href="<?=base_url().'Welcome/detProduk/'.$p['id_product']?>">
-											<h4>
-												<?=$p['nama_product']?>
-											</h4>
-										</a>
-									</center>
-								</div>
-							</div>
-						</div>
-						<?php } }?>
-
-						<div class="clearfix"></div>
-						<hr>
-						<a href="<?=base_url().'Welcome/portofolio'?>" class="btn btn-danger pull-right btn-md" class="agile-more"> LEARN MORE</a>
-					</div>
-				</div>
-			</div>
-	</section>
-
-	<section class="service-section  w3ls-section" id="services">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h1>SOLUTION</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-lg-4 col-xs-12 col-md-border">
-					<small>
-						<p>
-							<?=$dsc->desc_solution?>
-						</p>
-					</small>
-				</div>
-
-				<?php $slider=$this->MModel->getData("SELECT @row := @row + 1 as row, t.* FROM servis t, (SELECT @row := 0) r");
-					if($slider) {
-					foreach ($slider as $s) {
-					if($s['row'] % 2 != 0) {?>
-				<div class="col-md-4 col-lg-4 col-xs-12 col-md-border">
-					<li class="list-group-item list-group-item-success">
-						<a href="<?=base_url().'Welcome/detServis/'.$s['id_servis']?>">
-							<?=$s['nama_servis']?>
-						</a>
-					</li>
-					</br>
-				</div>
-				<?php } if($s['row'] %2 == 0) { ?>
-				<div class="col-md-4 col-lg-4 col-xs-12 col-md-border">
-					<li class="list-group-item list-group-item-info">
-						<a href="<?=base_url().'Welcome/detServis/'.$s['id_servis']?>">
-							<?=$s['nama_servis']?>
-						</a>
-					</li>
-					</br>
-				</div>
-				<?php } } } ?>
-			</div>
-		</div>
-
-	</section>
-
-	<section class="service-section  w3ls-section" id="services">
-		<div class="container">
-			<hr>
-			<div class="service-grids agile">
-				<div class="service-grid agileits_w3layouts ">
-					<div class="col-md-4">
-						<div class="panel-default">
-							<center>
-								<img class="img-responsive" src="<?=base_url().'img/profile/slide.png'?>">
-							</center>
-							<div class="panel-heading bg-default">
-								<center>
-									<button href="" class="btn btn-primary btn-block">
-										<h4>Partner</h4>
-									</button>
-								</center>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="panel-default">
-							<center>
-								<img class="img-responsive" src="<?=base_url().'img/profile/slide.png'?>">
-							</center>
-							<div class="panel-heading bg-default">
-								<center>
-									<button onClick="addClient()" class="btn btn-primary btn-block">
-										<h4>Client</h4>
-									</button>
-								</center>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="panel-default">
-							<center>
-								<img class="img-responsive" src="<?=base_url().'img/profile/slide.png'?>">
-							</center>
-							<div class="panel-heading bg-default">
-								<center>
-									<button onClick="addKarir()" class="btn btn-primary btn-block">
-										<h4>Carrer</h4>
-									</button>
-								</center>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<?php $this->load->view("cms/include/footer"); ?>
 
 	<script type="text/javascript">
